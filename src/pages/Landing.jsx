@@ -4,11 +4,13 @@ import Footer from "../components/Footer";
 import "../index.css";
 import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
+import { useNav } from "../utils/navigate";
 
 
 function Landing() {
 
   const [showCursor, setShowCursor] = useState(true);
+  const { goToFormat } = useNav();
 
 
   return (
@@ -43,7 +45,7 @@ function Landing() {
           <p className="hero-subtitle">
             Create Your Resume Effortlessly with ResuMate - The Ultimate Free Resume Builder
           </p>
-          <button className="hero-btn">Get Started</button>
+          <button className="hero-btn" onClick={goToFormat}>Get Started</button>
         </div>
       </section>
 
@@ -75,7 +77,7 @@ function Landing() {
       {/* Call to Action Section */}
       <section className="cta-section">
         <h2 className="cta-title">Ready to Land Your Dream Job?</h2>
-        <button className="cta-btn">Create Your Resume Now</button>
+        <button className="cta-btn" onClick={goToFormat}>Create Your Resume Now</button>
       </section>
     </div>
     <Footer/>

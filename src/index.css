@@ -1,7 +1,7 @@
 /* Tailwind Import */
 @import "tailwindcss";
 
-/* Navbar base */
+/*                                                 Navbar                                                               */
 .navbar {
   @apply bg-gray-100 shadow-md;
 }
@@ -56,7 +56,7 @@
 }
 
 
-/* Footer Base */
+/*                                                 Footer                                                               */
 .footer {
   @apply bg-gray-900 py-6 flex flex-col items-center justify-center;
 }
@@ -85,8 +85,13 @@
 .footer-icons .instagram:hover {
   color: #e1306c;
 }
-/* Landing Page Styles */
-/* Hero Section */
+/*                                                 Pages                                                               */
+
+
+
+
+/*                                                 Landing                                                               */
+
 .hero-section {
   @apply bg-gradient-to-r from-blue-500 to-indigo-600 text-white h-screen flex items-center justify-center;
 }
@@ -162,6 +167,13 @@
   50% { background-position: 100% 50%, 0 100%; }
   100% { background-position: 0 0, 50% 50%; }
 }
+.feature-heading {
+  @apply text-2xl font-bold mb-3; /* bigger + bolder */
+}
+
+.feature-text {
+  @apply text-gray-600 text-base; /* normal weight, readable size */
+}
 
 .feature-heading,
 .feature-text {
@@ -197,4 +209,87 @@
 
 .cta-btn:hover {
   cursor: pointer;
+}
+
+/*                                                 Format Select                                                               */
+
+.format-card {
+  @apply bg-white rounded-xl shadow-md p-8 cursor-pointer hover:shadow-lg transition;
+}
+
+.format-title {
+  @apply text-2xl font-semibold mb-4 text-indigo-600;
+}
+
+.format-desc {
+  @apply text-gray-600;
+}
+
+
+/* Page wrapper */
+.format-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main section */
+.format-main {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-600 text-white; 
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Heading */
+.format-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Grid */
+.format-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+@media(min-width: 768px) {
+  .format-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Cards */
+.format-card {
+  @apply bg-yellow-400;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.format-card:hover {
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+}
+
+/* Card heading & description */
+.format-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4f46e5; /* indigo-600 */
+  margin-bottom: 0.5rem;
+  @apply text-2xl font-bold mb-3;
+}
+
+.format-desc {
+  color: #ffffff; /* gray-700 */
 }

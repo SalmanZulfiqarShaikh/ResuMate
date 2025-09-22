@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
+import { useNav } from "../utils/navigate";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { goToLanding } = useNav();
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         {/* Logo + Text */}
-        <div className="nav-logo">
+        <div className="nav-logo" onClick={goToLanding} >
           <img src="ResuMateLogo.png" alt="ResuMate Logo" className="logo-img" />
           <Link to="/" className="logo-text">
             ResuMate

@@ -1,19 +1,19 @@
 import React from 'react';
-import './App.css';
+import './index.css'; // Tailwind imported here
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
-// import FormatSelect from './components/FormatSelect';
-// import Form from './components/Form';
-// import Result from './components/Result';
+import FormatSelect from './pages/FormatSelect';
+import Form from './pages/Form';
+import Result from './pages/Result';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        {/* <Route path="/format" element={<FormatSelect />} />
+        <Route path="/format" element={<FormatSelect />} />
         <Route path="/form" element={<Form />} />
-        <Route path="/result" element={<Result />} /> */}
+        <Route path="/result" element={<Result />} />
       </Routes>
     </Router>
   );
