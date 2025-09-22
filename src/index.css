@@ -1,1 +1,87 @@
+/* Tailwind Import */
 @import "tailwindcss";
+
+/* Navbar base */
+.navbar {
+  @apply bg-white shadow-md;
+}
+
+/* Container */
+.nav-container {
+  @apply max-w-7xl mx-auto px-4 py-3 flex justify-between items-center;
+}
+
+/* Logo section */
+.nav-logo {
+  @apply flex items-center space-x-2;
+}
+
+.logo-img {
+  @apply h-8 w-8 transform transition duration-300 hover:scale-110;
+}
+
+.logo-text {
+  @apply text-2xl font-bold text-indigo-600;
+}
+
+/* Desktop Icons (black/gray default, colored on hover) */
+.nav-icons a {
+  @apply mx-2 transform transition duration-300 hover:scale-110;
+  color: #27b7db; /* default black/gray */
+}
+
+.nav-icons .github:hover {
+  color: black;
+}
+.nav-icons .linkedin:hover {
+  color: #0a66c2;
+}
+.nav-icons .instagram:hover {
+  color: #e1306c;
+}
+
+/* Mobile Menu (icons always colored) */
+.mobile-menu {
+  @apply md:hidden bg-white shadow-md px-6 py-4 flex justify-center space-x-8;
+}
+
+.mobile-menu .github {
+  color: black;
+}
+.mobile-menu .linkedin {
+  color: #0a66c2;
+}
+.mobile-menu .instagram {
+  color: #e1306c;
+}
+
+
+/* Footer Base */
+.footer {
+  @apply bg-gray-900 py-6 flex flex-col items-center justify-center;
+}
+
+.footer-text {
+  @apply text-gray-400 text-sm mb-4 text-center;
+}
+
+/* Icons - same light color initially */
+.footer-icons {
+  @apply flex space-x-6;
+}
+
+.footer-icons a {
+  color: #9ca3af; /* light gray by default */
+  @apply transition duration-300 transform hover:scale-110;
+}
+
+/* Hover colors */
+.footer-icons .github:hover {
+  color: black;
+}
+.footer-icons .linkedin:hover {
+  color: #0a66c2;
+}
+.footer-icons .instagram:hover {
+  color: #e1306c;
+}
