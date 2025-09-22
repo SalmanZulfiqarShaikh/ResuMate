@@ -3,7 +3,7 @@
 
 /* Navbar base */
 .navbar {
-  @apply bg-white shadow-md;
+  @apply bg-gray-100 shadow-md;
 }
 
 /* Container */
@@ -84,4 +84,117 @@
 }
 .footer-icons .instagram:hover {
   color: #e1306c;
+}
+/* Landing Page Styles */
+/* Hero Section */
+.hero-section {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-600 text-white h-screen flex items-center justify-center;
+}
+
+.hero-content {
+  @apply text-center px-6 max-w-2xl;
+}
+
+.hero-title {
+  @apply text-4xl md:text-6xl font-bold mb-6;
+}
+
+.hero-subtitle {
+  @apply text-lg md:text-xl mb-8;
+}
+
+.hero-btn {
+  @apply bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition;
+}
+
+.hero-btn:hover {
+  cursor: pointer;
+}
+
+/* Features Section */
+.features-section {
+  @apply py-20 px-6 bg-gray-100 text-center;
+}
+
+.features-title {
+  @apply text-3xl font-bold mb-12;
+}
+
+.features-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto;
+}
+
+.feature-card {
+  @apply bg-white rounded-xl shadow-md p-6 transition relative overflow-hidden;
+}
+
+/* Hover effect (only desktop) */
+.feature-card:hover {
+  cursor: pointer;
+  @apply text-white;
+  background: linear-gradient(to right, #3b82f6, #4f46e5); /* blue-500 → indigo-600 */
+}
+
+/* Cloudy animated effect */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%),
+              radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%);
+  background-size: 40% 40%;
+  background-position: 0 0, 50% 50%;
+  animation: featureClouds 10s linear infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes featureClouds {
+  0% { background-position: 0 0, 50% 50%; }
+  50% { background-position: 100% 50%, 0 100%; }
+  100% { background-position: 0 0, 50% 50%; }
+}
+
+.feature-heading,
+.feature-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* 📱 Mobile + tablet: gradient default, no clouds */
+@media (max-width: 768px) {
+  .feature-card {
+    background: linear-gradient(to right, #3b82f6, #4f46e5) !important;
+    color: white !important;
+  }
+
+  .feature-card::before {
+    display: none !important;
+  }
+}
+
+
+/* CTA Section */
+.cta-section {
+  @apply py-20 bg-indigo-600 text-center text-white;
+}
+
+.cta-title {
+  @apply text-3xl font-bold mb-6;
+}
+
+.cta-btn {
+  @apply bg-yellow-400 text-black font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-yellow-500 transition;
+}
+
+.cta-btn:hover {
+  cursor: pointer;
 }
