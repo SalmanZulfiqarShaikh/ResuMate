@@ -1,4 +1,3 @@
-// navigate.js
 import { useNavigate } from "react-router-dom";
 
 export const useNav = () => {
@@ -13,12 +12,11 @@ export const useNav = () => {
   };
 
   const goToForm = (format) => {
-    // pass format state
-    navigate("/form", { state: { format } });
+    // ab format URL param me jayega
+    navigate(`/form/${format}`);
   };
 
   const goToResult = (resumeData) => {
-    // passing the generated resume data to result page
     navigate("/result", { state: { resumeData } });
   };
 

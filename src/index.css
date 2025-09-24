@@ -293,3 +293,86 @@
 .format-desc {
   color: #ffffff; /* gray-700 */
 }
+
+/*                                                 Form                                                               */
+
+
+/* Form Page */
+.form-page {
+  @apply max-w-2xl mx-auto p-6 space-y-8 bg-white shadow-md rounded-lg;
+}
+
+.form-heading {
+  @apply text-center text-2xl font-bold text-indigo-600;
+}
+
+.form-subheading {
+  @apply text-center text-lg font-bold text-gray-700 mt-6;
+}
+
+.form-input {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}
+
+.form-section {
+  @apply space-y-4;
+}
+
+.form-subgroup {
+  @apply space-y-2 mb-4;
+}
+
+/* Photo Upload */
+.photo-upload {
+  @apply flex justify-center;
+}
+
+.photo-label {
+  @apply cursor-pointer;
+}
+
+.photo-circle {
+  @apply w-32 h-32 rounded-full border-2 border-dashed flex items-center justify-center text-gray-500 hover:bg-gray-50 transition;
+}
+
+.photo-preview {
+  @apply w-full h-full rounded-full object-cover;
+}
+
+.photo-placeholder {
+  @apply flex flex-col items-center text-center text-sm;
+}
+
+.photo-icon {
+  @apply text-2xl mb-1;
+}
+
+/* Proficiency Bar */
+.proficiency-toggle {
+  @apply text-sm text-blue-500 underline;
+}
+
+.progress-bar {
+  @apply w-full bg-gray-200 rounded-full h-3 overflow-hidden;
+}
+
+.progress-fill {
+  @apply bg-blue-500 h-3 rounded-full transition-all duration-500;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-indigo-700 transition;
+}
+
+.btn-disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition;
+}
+
+.submit-wrapper {
+  @apply text-center;
+}
