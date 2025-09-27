@@ -3,7 +3,8 @@ import './index.css'; // Tailwind imported here
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import FormatSelect from './pages/FormatSelect';
-import FormPage from './pages/Form';
+import AtsForm from './pages/AtsForm';
+import VisualForm from './pages/VisualForm';
 import Result from './pages/Result';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/format" element={<FormatSelect />} />
-        <Route path="/form/:format" element={<FormPage />} />
+        <Route path="/AtsForm" element={<AtsForm/>}/>
+          <Route path="/VisualForm" element={<VisualForm/>}/>
         <Route path="/result" element={<Result />} />
       </Routes>
     </Router>

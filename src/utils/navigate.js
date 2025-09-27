@@ -11,14 +11,19 @@ export const useNav = () => {
     navigate("/format");
   };
 
-  const goToForm = (format) => {
-    // ab format URL param me jayega
-    navigate(`/form/${format}`);
+  const goToATS = () => {
+    
+    navigate(`/AtsForm`);
   };
 
+
+  const goToVisual = () => {
+    
+    navigate(`/VisualForm`);
+  };
   const goToResult = (resumeData) => {
     navigate("/result", { state: { resumeData } });
   };
 
-  return { goToLanding, goToFormat, goToForm, goToResult };
+  return { goToLanding, goToFormat, goToATS,goToVisual, goToResult };
 };

@@ -5,7 +5,7 @@ import "../index.css";
 import { useNav } from "../utils/navigate";
 
 function FormatSelect() {
-  const { goToForm } = useNav();
+  const { goToATS, goToVisual } = useNav();
 
   return (
     <div className="format-page">
@@ -13,13 +13,13 @@ function FormatSelect() {
       <main className="format-main">
         <h1 className="format-heading">Choose Your Resume Format</h1>
         <div className="format-grid">
-          <div className="format-card" onClick={() => goToForm("ats")}>
+          <div className="format-card" onClick={goToATS}>
             <h2 className="format-title">ATS-Friendly</h2>
             <p className="format-desc">
               Simple, text-based resume that passes Applicant Tracking Systems.
             </p>
           </div>
-          <div className="format-card" onClick={() => goToForm("visual")}>
+          <div className="format-card" onClick={goToVisual}>
             <h2 className="format-title">Visually Appealing</h2>
             <p className="format-desc">
               Modern, eye-catching design to impress recruiters.
