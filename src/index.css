@@ -21,8 +21,9 @@
 }
 
 .logo-text {
-  @apply text-2xl font-bold text-indigo-600;
+  @apply text-2xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent;
 }
+
 
 /* Desktop Icons (black/gray default, colored on hover) */
 .nav-icons a {
@@ -181,7 +182,7 @@
   z-index: 1;
 }
 
-/* 📱 Mobile + tablet: gradient default, no clouds */
+/* Mobile + tablet: gradient default, no clouds */
 @media (max-width: 768px) {
   .feature-card {
     background: linear-gradient(to right, #3b82f6, #4f46e5) !important;
@@ -294,11 +295,11 @@
   color: #ffffff; /* gray-700 */
 }
 
-/*                                            ATS Form                                                               */
+/*                                            ATS/Visual Forms                                                               */
 
 .ats-container {
   min-height: 100vh;
-  background-color: #f3f4f6; /* bg-gray-100 */
+  @apply bg-gradient-to-r from-yellow-500 to-indigo-600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,6 +335,7 @@
   color: #4f46e5; /* text-indigo-600 */
   margin-bottom: 1rem;
   display: block;
+  
 }
 
 .section-space {
@@ -408,4 +410,41 @@
 }
 .submit-btn:hover {
   opacity: 0.9;
+}
+.image-upload {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically if parent has height */
+  margin-bottom: 2rem;
+}
+
+.image-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder,
+.profile-preview {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #3b82f6; /* blue border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  background: #f9fafb;
+  flex-direction: column;
+  color: #6b7280;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.profile-preview {
+  object-fit: cover;
 }

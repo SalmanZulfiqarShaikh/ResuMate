@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import AddButton from "../components/AddButton";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../index.css"
 
 function ATSForm() {
@@ -37,6 +39,8 @@ function ATSForm() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="ats-container">
       <div className="ats-wrapper">
         <h1 className="ats-title">ATS Resume Builder</h1>
@@ -256,6 +260,8 @@ function ATSForm() {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
